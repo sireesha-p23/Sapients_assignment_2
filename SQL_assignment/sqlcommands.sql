@@ -97,4 +97,20 @@ SELECT modulename FROM modules,courses WHERE title='Oracle DBA';
 /*query 14:
 Write a Query which displays the student ID, Student name, Batch code, place and phone number of the student's who took training from CHENNAI in the year 2012.*/
 
+/*------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*Query 14:
+Write a query which will display the student id, student names who are enrolled for the course code 200?*/
+
+SELECT studentid,studentname,students.batchcode,place,phone FROM students INNER JOIN batches ON batches.batchcode=students.batchcode WHERE place='CHENNAI' AND startdate BETWEEN '2012-01-01' AND '2012-12-31'; 
+
+/*------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*Query 15:
+Write a query which will display the student id, student names who are enrolled for the course code 200?*/
+
+SELECT studentid,studentname FROM students INNER JOIN batches ON batches.batchcode=students.batchcode WHERE coursecode=200;
+
+/*------------------------------------------------------------------------------------------------------------------------------------------*/
+
 
